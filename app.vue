@@ -1,9 +1,11 @@
 <template>
-  <Header />
-  <div>
-    <P>TEST</P>
-  </div>
+    <NuxtPage />
 </template>
 
 <script>
+// Empty for now
 </script>
+
+<style>
+/* Global styles can be added here */
+</style>

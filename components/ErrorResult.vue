@@ -1,51 +1,64 @@
 <template>
     <ul>
   <li>
-    <!-- <h2>{result.result[0].title}</h2> -->
+    <h2>{{ ResultTitle0 }}</h2>
     <div>
-      <!-- <p>{result.result[0].amount}</p> -->
+      <p>{{ ResultScore0 }}</p>
       <Icon name = "ondekte-fouten" />
     </div>
       
   </li>
 
   <li>
-    <!-- <h2>{result.result[1].title}</h2> -->
+    <h2>{{ ResultTitle1 }}</h2>
     <div>
-      <!-- <p>{result.result[1].amount}</p> -->
+      <p>{{ ResultScore1 }}</p>
       <Icon name = "contrast-fouten" />
     </div>
       
   </li> 
 
   <li>
-    <!-- <h2>{result.result[2].title}</h2> -->
+    <h2>{{ ResultTitle2 }}</h2>
     <div>
-      <!-- <p>{result.result[2].amount}</p> -->
+      <p>{{ ResultScore2 }}</p>
       <Icon name = "structuele-fouten" />
     </div>
   </li> 
     
   <li>
-    <!-- <h2>{result.result[3].title}</h2> -->
+    <h2>{{ ResultTitle3 }}</h2>
     <div>
-      <!-- <p>{result.result[3].amount}</p> -->
+      <p>{{ ResultScore3 }}</p>
       <Icon name = "ontbrekende-alt-teksten" />
     </div>
       
   </li>  
 
   <li>
-    <!-- <h2>{result.result[4].title}</h2> -->
+    <h2>{{ ResultTitle4 }}</h2>
     <div>
-      <!-- <p>{result.result[4].amount}</p> -->
+      <p>{{ ResultScore4 }}</p>
       <Icon name = "aria-label" />
     </div>
   </li>
 </ul>
 </template>
 
-<script>
+<script setup>
+  const { data: scans } = await useFetch('/api/scans'); // hier haal ik de de data vanuit de scan.ts file
+  
+  let ResultTitle0 = scans.value.data.data[0].result[0].title; // hier haalt hij de titel op van de eerste resultaat op in de eerste maand
+  let ResultTitle1 = scans.value.data.data[0].result[1].title; // hier haalt hij de titel op van de tweede resultaat op in de eerste maand
+  let ResultTitle2 = scans.value.data.data[0].result[2].title; // hier haalt hij de titel op van de derde resultaat op in de eerste maand
+  let ResultTitle3 = scans.value.data.data[0].result[3].title; // hier haalt hij de titel op van de vierde resultaat op in de eerste maand
+  let ResultTitle4 = scans.value.data.data[0].result[4].title; // hier haalt hij de titel op van de vijfde resultaat op in de eerste maand
+
+  let ResultScore0 = scans.value.data.data[0].result[0].amount; // hier haalt hij de score op van de eerste resultaat op in de eerste maand
+  let ResultScore1 = scans.value.data.data[0].result[1].amount; // hier haalt hij de score op van de eerste resultaat op in de eerste maand
+  let ResultScore2 = scans.value.data.data[0].result[2].amount; // hier haalt hij de score op van de eerste resultaat op in de eerste maand
+  let ResultScore3 = scans.value.data.data[0].result[3].amount; // hier haalt hij de score op van de eerste resultaat op in de eerste maand
+  let ResultScore4 = scans.value.data.data[0].result[4].amount; // hier haalt hij de score op van de eerste resultaat op in de eerste maand
 </script>
 
 <style scoped>

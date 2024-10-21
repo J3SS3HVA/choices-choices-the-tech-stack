@@ -17,7 +17,7 @@
   
   <script>
 
-import '~/assets/css/global.css'
+// import '~/assets/css/global.css'
   </script>
 
 <style>

@@ -22,5 +22,5 @@
 
   let Description = scans.value.data.data[0].description; // hier haalt hij de beschrijving op van de eerste maand
   let IdScan = scans.value.data.data[0].id; // hier haalt hij de id op van de eerste maand
-
+  let Score = scans.value.data.data[0].score // hier haal je de algemene score van de scan op
   let Frd = scans.value.data.data[0].frd_site_id; // hier haalt hij de frd id op van de eerste maand

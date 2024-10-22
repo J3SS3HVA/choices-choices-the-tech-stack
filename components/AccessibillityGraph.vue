@@ -13,7 +13,7 @@
       </nav>
     </div>
     <figure>
-      <canvas id="line-chart" aria-label="Grafiek van scanresultaten van een jaar">
+      <canvas id="line-chart">
         <ul>
           <li v-for="(item, index) in scans.data.data" :key="index" :tabindex="16 + index" 
               :aria-label="`Maand ${item.date}: ${item.score}%`">

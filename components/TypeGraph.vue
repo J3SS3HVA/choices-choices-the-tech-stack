@@ -2,7 +2,7 @@
   <section>
     <h2>Soorten foutmeldingen</h2>
     <figure>
-      <canvas id="bar-chart" aria-label="Soorten fouten grafiek"></canvas>
+      <canvas id="bar-chart"></canvas>
       <ul>
         <!-- <li v-for="(item, index) in scans.data.data[0].result.slice(1)" :key="index">
             {{ item.title }}: {{ item.amount }}

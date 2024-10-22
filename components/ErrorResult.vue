@@ -1,48 +1,60 @@
 <template>
-    <ul>
-  <li>
-    <h2>{{ ResultTitle0 }}</h2>
-    <div>
-      <p>{{ ResultScore0 }}</p>
-      <Icon name = "ondekte-fouten" />
-    </div>
-      
-  </li>
+  <ul>
+    <li
+      tabindex="6"
+      :aria-label="`${ResultTitle0}: ${ResultScore0} fouten`"
+    >
+      <h2>{{ ResultTitle0 }}</h2>
+      <div>
+        <p>{{ ResultScore0 }}</p>
+        <Icon name="ondekte-fouten" />
+      </div>
+    </li>
 
-  <li>
-    <h2>{{ ResultTitle1 }}</h2>
-    <div>
-      <p>{{ ResultScore1 }}</p>
-      <Icon name = "contrast-fouten" />
-    </div>
-      
-  </li> 
+    <li
+      tabindex="7"
+      :aria-label="`${ResultTitle1}: ${ResultScore1} fouten`"
+    >
+      <h2>{{ ResultTitle1 }}</h2>
+      <div>
+        <p>{{ ResultScore1 }}</p>
+        <Icon name="contrast-fouten" />
+      </div>
+    </li>
 
-  <li>
-    <h2>{{ ResultTitle2 }}</h2>
-    <div>
-      <p>{{ ResultScore2 }}</p>
-      <Icon name = "structuele-fouten" />
-    </div>
-  </li> 
-    
-  <li>
-    <h2>{{ ResultTitle3 }}</h2>
-    <div>
-      <p>{{ ResultScore3 }}</p>
-      <Icon name = "ontbrekende-alt-teksten" />
-    </div>
-      
-  </li>  
+    <li
+      tabindex="8"
+      :aria-label="`${ResultTitle2}: ${ResultScore2} fouten`"
+    >
+      <h2>{{ ResultTitle2 }}</h2>
+      <div>
+        <p>{{ ResultScore2 }}</p>
+        <Icon name="structuele-fouten" />
+      </div>
+    </li>
 
-  <li>
-    <h2>{{ ResultTitle4 }}</h2>
-    <div>
-      <p>{{ ResultScore4 }}</p>
-      <Icon name = "aria-label" />
-    </div>
-  </li>
-</ul>
+    <li
+      tabindex="9"
+      :aria-label="`${ResultTitle3}: ${ResultScore3} fouten`"
+    >
+      <h2>{{ ResultTitle3 }}</h2>
+      <div>
+        <p>{{ ResultScore3 }}</p>
+        <Icon name="ontbrekende-alt-teksten" />
+      </div>
+    </li>
+
+    <li
+      tabindex="10"
+      :aria-label="`${ResultTitle4}: ${ResultScore4} fouten`"
+    >
+      <h2>{{ ResultTitle4 }}</h2>
+      <div>
+        <p>{{ ResultScore4 }}</p>
+        <Icon name="aria-label" />
+      </div>
+    </li>
+  </ul>
 </template>
 
 <script setup>

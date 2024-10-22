@@ -1,5 +1,9 @@
 <template>
-  <section v-if="scans && scans.data && scans.data.data && scans.data.data.length > 0">
+  <section
+    v-if="scans && scans.data && scans.data.data && scans.data.data.length > 0"
+    tabindex="5"
+    :aria-label="`Automatische scan: ${Score}% ${Description}`"
+  >
     <div>
       <h2>{{ Title }}</h2>
       <p>{{ Description }}</p>
@@ -12,28 +16,26 @@
 </template>
 
 <script setup>
+const { data: scans } = await useFetch('/api/scans'); // Hier haal ik de data vanuit de scan.ts file
+let Score = scans.value.data.data[0].score; // Hier haalt hij de score op van de eerste maand
+let Title = scans.value.data.data[0].title; // Hier haalt hij de titel op van de eerste maand
+let Description = scans.value.data.data[0].description; // Hier haalt hij de beschrijving op van de eerste maand
 
-
-const { data: scans } = await useFetch('/api/scans'); // hiier haal ik de de data vanuit de scan.ts file
-let Score = scans.value.data.data[0].score; // hier haalt hij  de score op van de eerste maand
-let Title = scans.value.data.data[0].title; // hier haalt hij  de titel op van de eerste maand
-let Description = scans.value.data.data[0].description; // hier haalt hij  de score op van de eerste maand
-
+// Import required components and plugins for the chart
 import { Chart, DoughnutController, ArcElement, Tooltip, Legend } from 'chart.js';
+import ChartDataLabels from 'chartjs-plugin-datalabels';
 import { onMounted } from 'vue';
 
-// Register required components for the chart
-Chart.register(DoughnutController, ArcElement, Tooltip, Legend);
+// Register required components and plugins
+Chart.register(DoughnutController, ArcElement, Tooltip, Legend, ChartDataLabels);
 
 onMounted(() => {
-
   let doughnutColor = Score < 50 ? '#c30010' : Score < 80 ? '#faa800' : '#228b22';
   let doughnutColorAlt = doughnutColor + "33";
 
-
   if (scans && scans.value && scans.value.data && scans.value.data.data.length > 0) {
     const ctx = document.getElementById('doughnut-chart').getContext('2d');
-    const chartscore = Score; // hier haalt hij  de score op van de Score var
+    const chartscore = Score;
 
     new Chart(ctx, {
       type: 'doughnut',
@@ -48,6 +50,11 @@ onMounted(() => {
         responsive: true,
         maintainAspectRatio: false,
         cutout: '70%',
+        plugins: {
+          datalabels: {
+            display: false, // Disable data labels
+          }
+        }
       }
     });
   }

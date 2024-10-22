@@ -1,13 +1,13 @@
 <template>
-  <section>
+  <section tabindex="11" :aria-label="'jaar overzicht van algemene scan resultaat'">
     <div>
       <h2>Toegankelijkheid</h2>
       <nav>
-        <button>
+        <button tabindex="13" aria-label="jaar terug knop">
           <Icon name="arrow-left" />
         </button>
-        <span>2024</span>
-        <button>
+        <span tabindex="12" aria-label="2024">2024</span>
+        <button  tabindex="15" aria-label="jaar verder knop">
           <Icon name="arrow-right" />
         </button>
       </nav>
@@ -15,8 +15,9 @@
     <figure>
       <canvas id="line-chart" aria-label="Grafiek van scanresultaten van een jaar">
         <ul>
-          <li v-for="(item, index) in scans.data.data" :key="index">
-            {{ item.date }}: {{ item.score }}
+          <li v-for="(item, index) in scans.data.data" :key="index" :tabindex="16 + index" 
+              :aria-label="`Maand ${item.date}: ${item.score}%`">
+            {{ item.date }}: {{ item.score }}%
           </li>
         </ul>
       </canvas>

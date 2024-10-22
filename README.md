@@ -1,7 +1,7 @@
-![Static Badge](https://img.shields.io/badge/usage-sveltekit-orange) ![Vercel Badge](https://deploy-badge.vercel.app/vercel/deploy-badge) ![License](https://img.shields.io/badge/license-MIT-blue)
+ ![Vercel Badge](https://deploy-badge.vercel.app/vercel/deploy-badge) ![License](https://img.shields.io/badge/license-MIT-blue)
 
 # Access  Dash
-Welkom bij Access Dash, een website gebouwd met `SvelteKit`
+Welkom bij Access Dash, een website gebouwd met `Nuxt`
 
 <img src="https://github.com/user-attachments/assets/ec55efa2-7813-40c6-a731-d3b36bab8fd1" width="400px" height="400px">
 <img src="https://github.com/user-attachments/assets/b23810ce-6fb6-458d-96f7-f09abfd961d9" width="400px" height="400px">
@@ -24,17 +24,17 @@ AccessDash is een nieuwe tool die bedrijven moet gaan helpen in het digitaal toe
 Dit is een project die we maken voor het bedrijf [Future Ready Design](https://www.futureready.design/). Het bedrijf is zelf bezig met het maken van een programma die Accesdash heet. Dit programma kan maandelijks een automatische scan uitvoeren van andere websites om vervolgens resultaten mee te geven die de toegankelijkheid laat zien van het bedrijf.<br>
 Het is De opdracht dat wij als team een Detail pagina maken waar de eigenaar van de website de scan resultaten kan zien om te kijken hoe toegankelijk hij is. Daarnaast worden er met grafieken de scoren aangegeven en een weergave van alle soorten fouten die in de website voorkomen.
 
-[Livelink](https://lose-your-head-the-client-case-omega.vercel.app/)
+[Livelink](https://choices-choices-the-tech-stack-kappa.vercel.app/)
 
 ## Gebruikersaanwijzing
 
 Het programma word zo gemaakt dat je als bedrijfs eigenaar al jouw websites in 1 omgeving kan zien. Klik je op zo'n Scanresultaat van een website, dan kom je op de detail pagina (die wij hebben gemaakt) met daarin uitgebreide informatie over de scan van de huidige maand.
 
 # Kenmerken
-* Site Generator: Sveltekit
+* Site Generator: Nuxt.js
 * API: Directus
 * Deployment: Vercel
-* `HTML`, `CSS`, `JS`
+* `HTML`, `CSS`, `JS` , `TS (TypeScript)`
 
 # Huisstijl
 
@@ -54,7 +54,7 @@ Het programma word zo gemaakt dat je als bedrijfs eigenaar al jouw websites in 1
 * [`Font-family: outfit;`](https://fonts.google.com/specimen/Outfit
 )
 
-## [`Global.css`](https://github.com/SamaraFellaDina/lose-your-head-the-client-case/blob/main/static/styles/global.css)
+## [`Global.css`](https://github.com/J3SS3HVA/choices-choices-the-tech-stack/blob/main/assets/css/global.css)
 
 # Installatie
 1. Clone deze repo
@@ -67,9 +67,9 @@ Het programma word zo gemaakt dat je als bedrijfs eigenaar al jouw websites in 1
 # Bronnen
 Hier vind je de bronnen van de tools die we hebben gebruikt. 
 
-* [Sveltekit](https://kit.svelte.dev/)
+* [Nuxt](https://nuxt.com/)
   
-![image](https://github.com/user-attachments/assets/27f8ed03-7202-4a01-9924-0f358fc5e75c)
+<img width="350px" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Flogixbuilt.com%2Fwp-content%2Fuploads%2F2023%2F08%2FFrame-3-1024x683.png&f=1&nofb=1&ipt=5d146c47760ef790be55816ac25c1cdacf3006fb0af6d785a252aeb645416de3&ipo=images">
 
 * [Vercel Docs](https://vercel.com/docs/frameworks/sveltekit)
   
